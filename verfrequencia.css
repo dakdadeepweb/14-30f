@@ -1,0 +1,110 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Estilo para a lista de alunos */
+#chamada {
+    margin-top: 20px;
+}
+
+.aluno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.aluno:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.status {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos dos botões de presença e falta */
+button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.presente {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.falta {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Fica cinza quando o botão não for clicado */
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+/* Estilo para o botão salvar */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Botão para salvar a chamada */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}

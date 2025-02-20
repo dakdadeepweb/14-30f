@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Tarefa</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+    <div id="tarefas-container"></div>
+
+    <script>
+        window.onload = function() {
+            let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+            const container = document.getElementById("tarefas-container");
+
+            if (tarefas.length === 0) {
+                container.innerHTML = "<p>Não há tarefas lançadas ainda.</p>";
+            } else {
+                tarefas.forEach((tarefa, index) => {
+                    const tarefaElement = document.createElement("div");
+                    tarefaElement.innerHTML = `
+                        <h3>Tarefa ${index + 1}: ${tarefa.nome}</h3>
+                        <p><strong>Data Máxima de Entrega:</strong> ${tarefa.data}</p>
+                        <button onclick="realizarTarefa('${tarefa.link}')">Realizar Tarefa</button>
+                    `;
+                    container.appendChild(tarefaElement);
+                });
+            }
+        };
+
+        function realizarTarefa(link) {
+            window.location.href = link;  // Redireciona o aluno para o link da tarefa
+        }
+    </script>
+</body>
+</html>
